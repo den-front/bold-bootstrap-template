@@ -1,0 +1,12 @@
+{
+  "name": "play_bootstrap_template",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "yarn parcel views/*.pug"
+  },
+  "devDependencies": {
+    "parcel": "^2.8.3"
+  }
+}
