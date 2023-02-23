@@ -1,15 +1,58 @@
 doctype html
 html
-    head
-        meta(charset='UTF-8')
-        meta(http-equiv='X-UA-Compatible' content='IE=edge')
-        meta(name='viewport' content='width=device-width, initial-scale=1.0')
-        title My Startup and SaaS Landing Page Template
-        link(rel='shortcut icon' href='../assets/images/favicon.svg' type='image/svg')
-        <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
-        link(rel='stylesheet' href='../assets/scss/styles.scss')
-    body
-        div Hello world!
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    title My Startup and SaaS Landing Page Template
+    link(rel='shortcut icon' href='../assets/images/favicon.svg' type='image/svg')
+    <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
+    link(rel='stylesheet' href='../assets/scss/styles.scss')
+  body
+    header.ud-header
+      .container
+        .row
+          .col-lg-12
+            nav.navbar.navbar-expand-lg
+              a.navbar-brand(href='#')
+                img(src='../assets/images/logo/logo.svg' alt='Logo')
+              button.navbar-toggler
+                span.toggler-icon  
+                span.toggler-icon  
+                span.toggler-icon  
+              .navbar-collapse
+                ul#nav.navbar-nav.mx-auto
+                  li.nav-item
+                    a.ud-menu-scroll(href='#home') Home
+                  li.nav-item
+                    a.ud-menu-scroll(href='#about') About
+                  li.nav-item
+                    a.ud-menu-scroll(href='#pricing') Pricing
+                  li.nav-item
+                    a.ud-menu-scroll(href='#team') Team
+                  li.nav-item
+                    a.ud-menu-scroll(href='#contact') Contact
+                  li.nav-item.nav-item-has-children
+                    a(href='javascript:void(0)')  Pages 
+                    ul.ud-submenu
+                      li.ud-submenu-item
+                        a.ud-submenu-link(href='#') About Page
+                      li.ud-submenu-item
+                        a.ud-submenu-link(href='#') Pricing Page
+                      li.ud-submenu-item
+                        a.ud-submenu-link(href='#') Contact Page
+                      li.ud-submenu-item
+                        a.ud-submenu-link(href='#') Blog Grid Page
+                      li.ud-submenu-item
+                        a.ud-submenu-link(href='#.html') Blog Details Page
+                      li.ud-submenu-item
+                        a.ud-submenu-link(href='#') Sign In Page
+                      li.ud-submenu-item
+                        a.ud-submenu-link(href='#') 404 Page
+              .navbar-btn.d-none.d-sm-inline-block
+                a.ud-main-btn.ud-login-btn(href='#') Sign In
+                a.ud-main-btn.ud-white-btn(href='javascript:void(0)') Sign Up
 
-        script(src="../assets/js/libs.js" type="module") 
-        script(src="../assets/js/main.js") 
+
+    script(src="../assets/js/libs.js" type="module") 
+    script(src="../assets/js/main.js") 
