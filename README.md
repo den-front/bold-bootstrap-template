@@ -1,4 +1,4 @@
-<h1 align=center>BOLD Bootstrap Template | <a href="#" rel="nofollow">Demo</a></h1>
+<h1 align=center>BOLD Bootstrap Template | <a href="https://den-front.github.io/showcases.github.io/bold-bootstrap-template/index.html" rel="nofollow">Demo</a></h1>
 
 <h4 align=center>☄️ Fast | ☁️ Fluent | 🌙 Smooth | 📱 Responsive</h4>
 <br>
