@@ -1,0 +1,60 @@
+
+section#contact.ud-contact
+  .container
+    .row.align-items-center
+      .col-xl-8.col-lg-7
+        .ud-contact-content-wrapper
+          .ud-contact-title
+            span CONTACT US
+            h2
+              | Let’s talk about
+              br
+              | Love to hear from you!
+          .ud-contact-info-wrapper
+            .ud-single-info
+              .ud-info-icon
+                i.lni.lni-map-marker
+              .ud-info-meta
+                h5 Our Location
+                p 401 Broadway, 24th Floor, Orchard Cloud View, London
+            .ud-single-info
+              .ud-info-icon
+                i.lni.lni-envelope
+              .ud-info-meta
+                h5 How Can We Help?
+                p info@yourdomain.com
+                p contact@yourdomain.com
+      .col-xl-4.col-lg-5
+        .ud-contact-form-wrapper.wow.fadeInUp(data-wow-delay=".2s")
+          h3.ud-contact-form-title Send us a Message
+          form.ud-contact-form
+            .ud-form-group
+              label(for="fullName") Full Name*
+              input(
+                placeholder="Adam Gelius" 
+                name="fullName" 
+                type="text"
+                )
+            .ud-form-group
+              label(for="email") Email*
+              input(
+                placeholder="example@yourmail.com" 
+                name="email" 
+                type="email"
+                )
+            .ud-form-group
+              label(for="phone") Phone*
+              input(
+                placeholder="+885 1254 5211 552" 
+                name="phone" 
+                type="text"
+                )
+            .ud-form-group
+              label(for="message") Message*
+              textarea(
+                placeholder="type your message here" 
+                rows="1" 
+                name="message"
+                )
+            .ud-form-group.mb-0
+              button.ud-main-btn(type="submit") Send Message
