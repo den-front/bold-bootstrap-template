@@ -1,15 +1,20 @@
-document.addEventListener("DOMContentLoaded", function () {
-  window.addEventListener("scroll", function () {
+(function () {
+  "use strict";
+
+  // ======= Sticky
+  window.onscroll = function () {
     const ud_header = document.querySelector(".ud-header");
+    const sticky = ud_header.offsetTop;
     const logo = document.querySelector(".navbar-brand img:first-child");
     const logo2 = document.querySelector(".navbar-brand img:last-child");
 
-    if (window.pageYOffset > 0) {
+    if (window.pageYOffset > sticky) {
       ud_header.classList.add("sticky");
     } else {
       ud_header.classList.remove("sticky");
     }
 
+    // === logo change
     if (ud_header.classList.contains("sticky")) {
       logo.hidden = true;
       logo2.hidden = false;
@@ -20,7 +25,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // show or hide the back-top-top button
     const backToTop = document.querySelector(".back-to-top");
-
     if (
       document.body.scrollTop > 50 ||
       document.documentElement.scrollTop > 50
@@ -29,19 +33,35 @@ document.addEventListener("DOMContentLoaded", function () {
     } else {
       backToTop.style.display = "none";
     }
-  });
-
-  document.querySelector(".back-to-top").addEventListener("click", function () {
-    scrollTo(document.documentElement);
-  });
-
-  Math.easeInOutQuad = function (t, b, c, d) {
-    t /= d / 2;
-    if (t < 1) return (c / 2) * t * t + b;
-    t--;
-    return (-c / 2) * (t * (t - 2) - 1) + b;
   };
 
+  //===== close navbar-collapse when a  clicked
+  let navbarToggler = document.querySelector(".navbar-toggler");
+  const navbarCollapse = document.querySelector(".navbar-collapse");
+
+  document.querySelectorAll(".ud-menu-scroll").forEach((e) =>
+    e.addEventListener("click", () => {
+      navbarToggler.classList.remove("active");
+      navbarCollapse.classList.remove("show");
+    })
+  );
+  navbarToggler.addEventListener("click", function () {
+    navbarToggler.classList.toggle("active");
+    navbarCollapse.classList.toggle("show");
+  });
+
+  // ===== submenu
+  const submenuButton = document.querySelectorAll(".nav-item-has-children");
+  submenuButton.forEach((elem) => {
+    elem.querySelector("a").addEventListener("click", () => {
+      elem.querySelector(".ud-submenu").classList.toggle("show");
+    });
+  });
+
+  // ===== wow js
+  new WOW().init();
+
+  // ====== scroll top js
   function scrollTo(element, to = 0, duration = 500) {
     const start = element.scrollTop;
     const change = to - start;
@@ -63,24 +83,14 @@ document.addEventListener("DOMContentLoaded", function () {
     animateScroll();
   }
 
-  let navbarToggler = document.querySelector(".navbar-toggler");
-  const navbarCollapse = document.querySelector(".navbar-collapse");
+  Math.easeInOutQuad = function (t, b, c, d) {
+    t /= d / 2;
+    if (t < 1) return (c / 2) * t * t + b;
+    t--;
+    return (-c / 2) * (t * (t - 2) - 1) + b;
+  };
 
-  document.querySelectorAll(".ud-menu-scroll").forEach((e) =>
-    e.addEventListener("click", () => {
-      navbarToggler.classList.remove("active");
-      navbarCollapse.classList.remove("show");
-    })
-  );
-  navbarToggler.addEventListener("click", function () {
-    navbarToggler.classList.toggle("active");
-    navbarCollapse.classList.toggle("show");
-  });
-
-  const submenuButton = document.querySelectorAll(".nav-item-has-children");
-  submenuButton.forEach((elem) => {
-    elem.querySelector("a").addEventListener("click", () => {
-      elem.querySelector(".ud-submenu").classList.toggle("show");
-    });
-  });
-});
+  document.querySelector(".back-to-top").onclick = () => {
+    scrollTo(document.documentElement);
+  };
+})();
