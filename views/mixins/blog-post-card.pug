@@ -1,0 +1,10 @@
+mixin blog-post-card(link="#", image="../assets/images/blog/blog-01.jpg", date="Dec 22, 2023", title="How to earn more money as a wellness coach", desc="Lorem Ipsum is simply dummy text of the printing and typesetting industry.")
+  .ud-single-blog
+    .ud-blog-image
+      a(href=link)
+        img(alt="blog" src=image)
+    .ud-blog-content
+      span.ud-blog-date=date
+      h3.ud-blog-title
+        a(href="#blog-details.html")= title
+      p.ud-blog-desc= desc
