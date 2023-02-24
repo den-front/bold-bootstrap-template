@@ -1,0 +1,41 @@
+section.ud-login
+  .container
+    .row
+      .col-lg-12
+        .ud-login-wrapper
+          .ud-login-logo
+            img(
+              alt="logo" 
+              src="../assets/images/logo/logo-2.svg"
+              )
+          form.ud-login-form
+            .ud-form-group
+              input(
+                placeholder="Email/username" 
+                name="email" 
+                type="email"
+                )
+            .ud-form-group
+              input(
+                placeholder="*********" 
+                name="password" 
+                type="password"
+                )
+            .ud-form-group
+              button.ud-main-btn.w-100(type="submit") Login
+          .ud-socials-connect
+            p Connect With
+            ul
+              li
+                a.facebook(href="javascript:void(0)")
+                  i.lni.lni-facebook-filled
+              li
+                a.twitter(href="javascript:void(0)")
+                  i.lni.lni-twitter-filled
+              li
+                a.google(href="javascript:void(0)")
+                  i.lni.lni-google
+          a.forget-pass(href="javascript:void(0)") Forget Password?
+          p.signup-option
+            | Not a member yet?
+            a(href="javascript:void(0)") Sign Up
